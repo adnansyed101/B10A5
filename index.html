@@ -10,10 +10,48 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+      body {
+        font-family: "Lexend", "Courier New", Courier, monospace;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
-    <header></header>
+    <header>
+      <nav class="bg-[#F9F7F3] pt-2 py-10">
+        <div class="navbar justify-center container mx-auto">
+          <div class="navbar-start hidden md:flex">
+            <button class="btn bg-[#B4F461]">Blog</button>
+          </div>
+          <div class="navbar-center flex-col">
+            <a class="flex items-center text-xl font-bold gap-4">
+              <img src="./assets/logo.png" alt="logo" />
+              Donate Bangladesh
+            </a>
+            <div class="flex mt-4 gap-4 md:hidden">
+              <button class="btn bg-[#B4F461]">Blog</button>
+              <p class="flex items-center text-xl gap-4">
+                <img src="./assets/coin.png" alt="Coin" />
+                <span>5500</span> BDT
+              </p>
+            </div>
+          </div>
+          <div class="navbar-end hidden md:flex">
+            <p class="flex items-center text-xl gap-4">
+              <img src="./assets/coin.png" alt="Coin" />
+              <span>5500</span> BDT
+            </p>
+          </div>
+        </div>
+      </nav>
+      <section class="flex justify-center gap-10 mt-5">
+        <button class="btn bg-[#B4F461]">Donation</button>
+        <button class="btn">History</button>
+      </section>
+    </header>
     <!-- Main section -->
     <main></main>
     <!-- Footer -->
