@@ -1,5 +1,3 @@
-const donationCards = document.getElementById("donation-cards");
-const donationHistory = document.getElementById("donation-history");
 const donationBtn = document.getElementById("donation-btn");
 const donationHistoryBtn = document.getElementById("donation-history-btn");
 
