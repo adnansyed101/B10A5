@@ -17,11 +17,29 @@ function toggleBtn(id, sectionId) {
 function addToDonations(e, input, donated) {
   e.preventDefault();
 
+  let currentBalance = document.getElementById("current-balance");
   let inputAmount = document.getElementById(input);
   const donatedAmount = document.getElementById(donated);
 
-  donatedAmount.innerText =
-    parseFloat(donatedAmount.innerText) + parseFloat(inputAmount.value);
+  const parsedCurrentBalance = parseFloat(currentBalance.innerText);
+  const parsedDonatedAmount = parseFloat(donatedAmount.innerText);
+  const parsedInputAmount = parseFloat(inputAmount.value);
 
-  inputAmount.value = "";
+  if (
+    isNaN(parsedCurrentBalance) ||
+    inputAmount.value === "" ||
+    inputAmount.value < 0
+  ) {
+    alert("Please Enter a valid amount");
+    return;
+  } else if (parsedInputAmount > parsedCurrentBalance) {
+    alert("You don't have enough balance ");
+    return;
+  } else {
+    donatedAmount.innerText = parsedDonatedAmount + parsedInputAmount;
+    currentBalance.innerText = parsedCurrentBalance - parsedInputAmount;
+    document.getElementById("my_modal_1").showModal();
+    inputAmount.value = "";
+  }
+
 }
