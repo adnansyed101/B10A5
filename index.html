@@ -10,6 +10,8 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/reusables.js" defer></script>
+    <script src="./js/app.js" defer></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
@@ -47,14 +49,14 @@
         </div>
       </nav>
       <section class="flex justify-center gap-10 mt-5">
-        <button class="btn bg-[#B4F461]">Donation</button>
-        <button class="btn">History</button>
+        <button id="donation-btn" class="btn bg-[#B4F461]">Donation</button>
+        <button id="donation-history-btn" class="btn">History</button>
       </section>
     </header>
     <!-- Main section -->
     <main class="container mx-auto my-5 p-2 flex-1">
       <!-- Cards -->
-      <section>
+      <section id="donation-cards">
         <!-- Card 1 -->
         <div class="card lg:card-side bg-base-100 shadow-xl border">
           <figure class="p-5 lg:w-1/2">
@@ -164,7 +166,7 @@
         </div>
       </section>
       <!-- History -->
-      <section class="hidden">
+      <section id="donation-history" class="hidden">
         <div class="card bg-base-100 w-full border">
           <div class="card-body">
             <p class="card-title">
