@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Now</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+      body {
+        font-family: "Lexend", "Courier New", Courier, monospace;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header>
+      <nav class="bg-[#F9F7F3] pt-2 py-10">
+        <div class="navbar justify-center container mx-auto">
+          <!-- Logo -->
+          <div class="navbar-start hidden md:flex">
+            <a href="./index.html" class="btn bg-[#B4F461]">Home</a>
+          </div>
+          <!-- Navbar Center -->
+          <div class="navbar-center flex-col">
+            <a class="flex items-center md:text-xl font-bold gap-2">
+              <img src="./assets/logo.png" alt="logo" />
+              Donate Bangladesh
+            </a>
+          </div>
+          <!-- Navbar End -->
+          <div class="navbar-end">
+            <p class="flex items-center md:text-xl gap-2">
+              <img src="./assets/coin.png" alt="Coin" />
+              <span id="current-balance">5500</span> BDT
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-center md:hidden">
+          <button class="btn bg-[#B4F461]">Blog</button>
+        </div>
+      </nav>
+    </header>
+    <!-- Main section -->
+    <main class="container mx-auto my-5 p-2 flex-1">
+      <!-- FAQ -->
+      <section>
+        <h1 class="text-2xl lg:text-4xl font-extrabold mb-4">Important FAQ</h1>
+        <!-- Accordion 1 -->
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model ?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) connects web pages to scripts or
+              programming languages by representing the structure of a
+              document—such as the HTML representing a web page—in memory.
+              Usually it refers to JavaScript, even though modeling HTML, SVG,
+              or XML documents as objects are not part of the core JavaScript
+              language. <br />
+              The DOM represents a document with a logical tree. Each branch of
+              the tree ends in a node, and each node contains objects. DOM
+              methods allow programmatic access to the tree. With them, you can
+              change the document's structure, style, or content.
+            </p>
+          </div>
+        </div>
+        <!-- Accordion 2 -->
+        <div class="collapse collapse-arrow border my-5">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select and element from the DOM ?
+          </div>
+          <div class="collapse-content">
+            <p>
+              JavaScript provides several methods to select DOM elements. Here
+              are some of them:
+              <br />
+              <br />
+              The getElementById method allows you to select an element by its
+              ID
+              <br />
+              <code> let element = document.getElementById("myId"); </code>
+              <br />
+              <br />
+              The getElementsByClassName method allows you to select elements by
+              their class name <br />
+              <code
+                >let elements =
+                document.getElementsByClassName("myClass");</code
+              >
+              <br />
+              <br />
+              The getElementsByTagName method allows you to select elements by
+              their tag name.
+              <br />
+              <code>let elements = document.getElementsByTagName("p");</code>
+              <br />
+              <br />
+              The querySelector method allows you to select the first element
+              that matches a specified CSS selector(s) in the document.
+              <br />
+              <code>let element = document.querySelector(".myClass");</code>
+              <br />
+              <br />
+              The querySelectorAll method allows you to select all elements that
+              match a specified CSS selector(s) in the document.
+              <br />
+              <code>let elements = document.querySelectorAll(".myClass");</code>
+            </p>
+          </div>
+        </div>
+        <!-- Accordion 3 -->
+        <div class="collapse collapse-arrow border my-5">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful ?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a technique in JavaScript where a single event
+              listener is attached to a parent element instead of attaching
+              event listeners to multiple child elements. When an event occurs
+              on a child element, the event bubbles up the DOM tree, and the
+              parent element's event listener handles the event based on the
+              target element.
+            </p>
+          </div>
+        </div>
+        <!-- Accordion 4 -->
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              We can use the setAttribute() and getAttribute() methods to change
+              or retrieve an elements attributes.
+              <br />
+              <code>element.setAttribute('src', 'newImage.jpg');</code>
+              <br />
+              <br />
+              To change an elements style, you can use the style property. This
+              allows you to modify any CSS property directly.
+              <br />
+              <code>
+                element.style.cssText = 'color: blue; background-color:
+                yellow;';
+              </code>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer footer-center bg-[#F9F7F3] text-base-content p-4">
+      <aside>
+        <p>Copyright © 2024 - All right reserved by Programming Hero</p>
+      </aside>
+    </footer>
+  </body>
+</html>
