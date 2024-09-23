@@ -16,13 +16,18 @@ donationHistoryBtn.addEventListener("click", (e) =>
 
 // Form Events
 noakhaliForm.addEventListener("submit", (e) =>
-  addToDonations(e, "noakhali-amount-input", "noakhali-amount")
+  addToDonations(
+    e,
+    "noakhali-amount-input",
+    "noakhali-amount",
+    "noakhali-title"
+  )
 );
 
 feniForm.addEventListener("submit", (e) =>
-  addToDonations(e, "feni-amount-input", "feni-amount")
+  addToDonations(e, "feni-amount-input", "feni-amount", "feni-title")
 );
 
 quotaForm.addEventListener("submit", (e) =>
-  addToDonations(e, "quota-amount-input", "quota-amount")
+  addToDonations(e, "quota-amount-input", "quota-amount", "quota-title")
 );

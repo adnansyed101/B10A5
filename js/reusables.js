@@ -13,8 +13,8 @@ function toggleBtn(id, sectionId) {
   document.getElementById(sectionId).classList.remove("hidden");
 }
 
-// Add to donations
-function addToDonations(e, input, donated) {
+// Add to donations and subtract from current balance.
+function addToDonations(e, input, donated, titleId) {
   e.preventDefault();
 
   let currentBalance = document.getElementById("current-balance");
@@ -40,6 +40,23 @@ function addToDonations(e, input, donated) {
     currentBalance.innerText = parsedCurrentBalance - parsedInputAmount;
     document.getElementById("my_modal_1").showModal();
     inputAmount.value = "";
+    showHistory(parsedInputAmount, titleId);
   }
+}
 
+// Show to history
+function showHistory(inputAmount, title) {
+  const donationHistory = document.getElementById("donation-history");
+  const doanatedTo = document.getElementById(title).innerText;
+
+  donationHistory.innerHTML += `
+   <div class="card-body border rounded-lg mb-2">
+      <p class="card-title">
+            ${inputAmount} Taka is Donated for ${doanatedTo}
+      </p>
+      <p class="text-gray-400 text-base">
+       ${new Date()}
+      </p>
+    </div>
+  `;
 }
