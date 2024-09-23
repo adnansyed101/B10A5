@@ -7,12 +7,14 @@ const feniForm = document.getElementById("feni-form");
 const quotaForm = document.getElementById("quota-form");
 
 // Button Events
-donationBtn.addEventListener("click", (e) =>
-  toggleBtn(e.target.id, "donation-cards")
-);
-donationHistoryBtn.addEventListener("click", (e) =>
-  toggleBtn(e.target.id, "donation-history")
-);
+donationBtn.addEventListener("click", (e) => {
+  toggleBtn(e.target.id);
+  toggleContent("donation-cards");
+});
+donationHistoryBtn.addEventListener("click", (e) => {
+  toggleBtn(e.target.id);
+  toggleContent("donation-history");
+});
 
 // Form Events
 noakhaliForm.addEventListener("submit", (e) =>

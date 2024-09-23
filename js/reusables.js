@@ -1,13 +1,15 @@
 // toggle btn and Toggle Content
-function toggleBtn(id, sectionId) {
+function toggleBtn(id) {
   // Toggle Btn
   document.getElementById("donation-btn").classList.remove("bg-[#B4F461]");
   document
     .getElementById("donation-history-btn")
     .classList.remove("bg-[#B4F461]");
   document.getElementById(id).classList.add("bg-[#B4F461]");
+}
 
-  //   Toggle content
+//   Toggle content
+function toggleContent(sectionId) {
   document.getElementById("donation-history").classList.add("hidden");
   document.getElementById("donation-cards").classList.add("hidden");
   document.getElementById(sectionId).classList.remove("hidden");
