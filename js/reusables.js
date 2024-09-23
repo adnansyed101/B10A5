@@ -30,7 +30,7 @@ function addToDonations(e, input, donated, titleId) {
   if (
     isNaN(parsedCurrentBalance) ||
     inputAmount.value === "" ||
-    inputAmount.value < 0
+    inputAmount.value <= 0
   ) {
     alert("Please Enter a valid amount");
     return;
@@ -54,10 +54,10 @@ function showHistory(inputAmount, title) {
   donationHistory.innerHTML += `
    <div class="card-body border rounded-lg mb-2">
       <p class="card-title">
-            ${inputAmount} Taka is Donated for ${doanatedTo}
+        ${inputAmount} Taka is Donated for ${doanatedTo}
       </p>
       <p class="text-gray-400 text-base">
-       ${new Date()}
+        ${new Date()}
       </p>
     </div>
   `;
